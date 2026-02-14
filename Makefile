@@ -1,8 +1,15 @@
 CC = gcc
-CFLAGS = -Wall -g
+CFLAGS = -Wall -Wexstra
+TARGET = fout
+SOURCE = main.c
 
-program: fout.c
-	gcc -Wall -g fout.c -o fout
+$(TARGET): $(SOURCE)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCE)
+
+install: $(TARGET)
+	sudo cp $(TARGET) /usr/local/bin
 
 clean:
-	rm -f fout
+	rm -f $(TARGET)
+
+.PHONY: install clean
