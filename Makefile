@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wexstra
+CFLAGS = -Wall -Wextra
 TARGET = fout
 SOURCE = main.c
 
