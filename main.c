@@ -6,7 +6,8 @@ int main(int argc, char *argv[]) {
     char data[4096];
     
     if (argc == 1) {
-        printf("No file selected.");
+        printf("No file selected.\n");
+        return 1;
     } else {
         fptr = fopen(argv[1], "r");
     }
